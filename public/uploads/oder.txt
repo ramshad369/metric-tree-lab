@@ -1,0 +1,24 @@
+orderId
+classId
+delivery info 
+status
+payment info
+
+
+MongoScript for experiment class and board
+
+order created
+board class delivery status
+
+payment info -  order_id payment_id(razorpay), payment_status = "initiated, pending, success, failure
+
+pass payment_id order_id
+
+new end point razorpay callback
+change the status payment and order
+
+check orderstatus new end point
+
+
+roles
+paid_user verified_user
