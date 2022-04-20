@@ -68,7 +68,7 @@ router.get('/listallusersprofiles', async (req, res) =>{
        var result = await usermodel.listallusersprofiles()
             if(!result){
                 res.status(400)
-                res.json({ error: 'notes data empty', error_description: "" })
+                res.json({ error: 'user data empty', error_description: "" })
                 return
             }
             res.json(result)

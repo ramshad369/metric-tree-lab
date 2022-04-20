@@ -1,0 +1,90 @@
+Project name : metric tree lab task
+API Documentation
+
+#User
+User Signup
+     path : api/user/signup
+     method : post
+     Parameters: 
+                           * email              		  -  (mandatory)
+                           * password                     -  (mandatory)
+                 	       * firstname                    -  (mandatory)
+                           * lastname                	  -  (mandatory)
+                           * address                      -  (mandatory)
+
+ response:
+              	* for error   : ({ error: 'signup failed', error_description: 'error' })
+              	* for success : (({ message: 'signup successful'})
+
+User login
+     path : api/user/login
+     method : post
+     Parameters: 
+                           * email              		  -  (mandatory)
+                           * password                     -  (mandatory)
+ response:
+              * for error   : ({ error: 'login failed', error_description: "incorrect password! })
+              * for success : (({ message: 'login successful'})
+
+ List all user profiles
+     path : api/user/listallusersprofiles
+     method : get
+     Parameters: 
+                           * None(body)
+ response:
+              	* for error   : ({ error: 'user data empty', error_description: "" })
+
+              	* for success :(result)
+
+ Logout
+     path : api/user/logout
+     method : get
+     Parameters: 
+                           * None(body)
+ response:
+              	* for success : res.status(204) 
+
+#Notes
+Create notes
+     path : api/notes/createnotes
+     method : post
+     Parameters: 
+                           * notetext              		  -  (mandatory)
+                           * fileupload                   -  (mandatory)
+                
+
+ response:
+              	* for error   : ({ error: 'Adding notes is failed!', error_description: error })
+              	* for success : (({ message: 'notes created successfully'})  
+
+Update notes
+     path : api/notes/updatenotes
+     method : post
+     Parameters:    
+                           * notetext              		  -  (mandatory)
+                           * fileupload                   -  (mandatory)
+                           * notesid            		  -  (mandatory)
+
+ response:
+              	* for error   : ({ error: 'Updating notes is failed!', error_description: error })
+              	* for success : (({ message: 'notes updated successfully'})  
+
+ List all notes
+     path : api/user/listallnotes
+     method : get
+     Parameters: 
+                           * None(body)
+ response:
+              	* for error   : ({ error: 'notes data empty', error_description: "" })
+
+              	* for success :(result)
+
+ delete notes
+     path : api/user/delete
+     method : delete
+     Parameters: 
+                           * None(body)
+ response:
+              	* for error   : ({ error: 'notes data empty', error_description: "" })
+
+              	* for success :(result)                  
